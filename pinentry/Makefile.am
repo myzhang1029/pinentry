@@ -36,7 +36,7 @@ endif
 noinst_LIBRARIES = libpinentry.a $(pinentry_curses)
 
 LDADD = $(COMMON_LIBS)
-AM_CPPFLAGS = $(COMMON_CFLAGS) -I$(top_srcdir)/secmem
+AM_CPPFLAGS = -I$(top_srcdir)/secmem $(COMMON_CFLAGS)
 
 libpinentry_a_SOURCES = pinentry.h pinentry.c argparse.c argparse.h \
 	password-cache.h password-cache.c $(pinentry_emacs_sources)

@@ -25,8 +25,8 @@ EXTRA_DIST = $(logos)
 
 bin_PROGRAMS = pinentry-w32
 
-AM_CPPFLAGS = $(COMMON_CFLAGS) -I$(top_srcdir)/secmem \
-	      -I$(top_srcdir)/pinentry
+AM_CPPFLAGS = -I$(top_srcdir)/secmem \
+	      -I$(top_srcdir)/pinentry $(COMMON_CFLAGS)
 
 
 pinentry_w32_SOURCES = main.c pinentry-w32.rc resource.h
